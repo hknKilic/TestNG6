@@ -21,22 +21,22 @@ public class _01_Giris {
 
     //Default olarak alfabetik sıraya göre çalışır
 
-    @Test
+    @Test(priority = 1) // default : 0, aynı sevilere yine alfabetik çalışır
     public void driverIslemleriniYap() {
         System.out.println("driverIslemleriniYap yapıldı");
     }
 
-    @Test
+    @Test(priority = 2)
     public void websitesiniAc() {
         System.out.println("websitesiniAc işlemi yapıldı");
     }
 
-    @Test
+    @Test(priority = 3)
     public void loginTestiniYap() {
         System.out.println("loginTestiniYap işlemi yapıldı");
     }
 
-    @Test
+    @Test(priority = 4)
     public void driverKapat() {
         System.out.println("driverKapat işlemi yapıldı");
     }
