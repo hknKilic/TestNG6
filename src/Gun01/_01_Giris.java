@@ -19,24 +19,26 @@ public class _01_Giris {
 //          LoginTestiniYap()
 //      }
 
+    //Default olarak alfabetik sıraya göre çalışır
+
     @Test
     public void driverIslemleriniYap() {
-
+        System.out.println("driverIslemleriniYap yapıldı");
     }
 
     @Test
     public void websitesiniAc() {
-
+        System.out.println("websitesiniAc işlemi yapıldı");
     }
 
     @Test
-    public void LoginTestiniYap() {
-
+    public void loginTestiniYap() {
+        System.out.println("loginTestiniYap işlemi yapıldı");
     }
 
     @Test
     public void driverKapat() {
-
+        System.out.println("driverKapat işlemi yapıldı");
     }
 
 }
