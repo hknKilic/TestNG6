@@ -18,16 +18,21 @@ import org.testng.annotations.Test;
 
 public class _04_SubscribeNewsLetter extends BaseDriver {
 
+    By link=By.linkText("Newsletter");
+    By subYes=By.xpath("//input[@value='1']");
+    By subNo=By.xpath("//input[@value='0']");
+    By cntBtn=By.xpath("//input[@value='Continue']");
+
     @Test(priority = 1)
     public void subscribeFunctionYes(){
 
-        WebElement newsLetterLink=driver.findElement(By.linkText("Newsletter"));
+        WebElement newsLetterLink=driver.findElement(link);
         newsLetterLink.click();
 
-        WebElement subscribeYes=driver.findElement(By.xpath("//input[@value='1']"));
+        WebElement subscribeYes=driver.findElement(subYes);
         subscribeYes.click();
 
-        WebElement continueButton=driver.findElement(By.xpath("//input[@value='Continue']"));
+        WebElement continueButton=driver.findElement(cntBtn);
         continueButton.click();
 
         MyFunc.successMessageValidation();
@@ -36,13 +41,13 @@ public class _04_SubscribeNewsLetter extends BaseDriver {
     @Test(priority = 2)
     public void subscribeFunctionNo(){
 
-        WebElement newsLetterLink=driver.findElement(By.linkText("Newsletter"));
+        WebElement newsLetterLink=driver.findElement(link);
         newsLetterLink.click();
 
-        WebElement subscribeNo=driver.findElement(By.xpath("//input[@value='0']"));
+        WebElement subscribeNo=driver.findElement(subNo);
         subscribeNo.click();
 
-        WebElement continueButton=driver.findElement(By.xpath("//input[@value='Continue']"));
+        WebElement continueButton=driver.findElement(cntBtn);
         continueButton.click();
 
         MyFunc.successMessageValidation();
@@ -51,11 +56,11 @@ public class _04_SubscribeNewsLetter extends BaseDriver {
     @Test(priority = 3)
     public void subscribeFunctionForBoth(){
 
-        WebElement newsLetterLink=driver.findElement(By.linkText("Newsletter"));
+        WebElement newsLetterLink=driver.findElement(link);
         newsLetterLink.click();
 
-        WebElement subscribeYes=driver.findElement(By.xpath("//input[@value='1']"));
-        WebElement subscribeNo=driver.findElement(By.xpath("//input[@value='0']"));
+        WebElement subscribeYes=driver.findElement(subYes);
+        WebElement subscribeNo=driver.findElement(subNo);
 
         //eğer yes seçili ise noyu tıkla else yes i tıkla
         if (subscribeYes.isSelected())
@@ -63,7 +68,7 @@ public class _04_SubscribeNewsLetter extends BaseDriver {
         else
             subscribeYes.click();
 
-        WebElement continueButton=driver.findElement(By.xpath("//input[@value='Continue']"));
+        WebElement continueButton=driver.findElement(cntBtn);
         continueButton.click();
 
         MyFunc.successMessageValidation();
