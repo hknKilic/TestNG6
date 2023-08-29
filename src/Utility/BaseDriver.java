@@ -1,9 +1,12 @@
 package Utility;
 
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
@@ -27,6 +30,22 @@ public class BaseDriver {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));  // 20 sn mühlet: elementi bulma mühleti
         wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 
+        loginTesti();
+    }
+
+    public void loginTesti(){
+        driver.get("https://opencart.abstracta.us/index.php?route=account/login");
+
+        WebElement inputEmail = driver.findElement(By.id("input-email"));
+        inputEmail.sendKeys("testng1@gmail.com");
+
+        WebElement inputpassword = driver.findElement(By.id("input-password"));
+        inputpassword.sendKeys("123qweasd");
+
+        WebElement loginBtn = driver.findElement(By.xpath("//input[@type='submit']"));
+        loginBtn.click();
+
+        Assert.assertTrue(driver.getTitle().equals("My Account"));
     }
 
     @AfterClass
