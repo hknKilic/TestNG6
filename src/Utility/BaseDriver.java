@@ -1,4 +1,5 @@
-package Utlity;
+package Utility;
+
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -17,8 +18,6 @@ public class BaseDriver {
 
     @BeforeClass
     public void baslangicIslemleri(){
-        System.out.println("baslangicIslemleri çalıştı");
-
         Logger logger= Logger.getLogger(""); // output yapılan logları al.
         logger.setLevel(Level.SEVERE); // sadece ERROR ları göster
 
@@ -31,8 +30,7 @@ public class BaseDriver {
     }
 
     @AfterClass
-    public void bitisIslemleri(){
-        System.out.println("bitisIslemleri çalıştı");
+    public void bitisIslemleri(){ // tearDown
         MyFunc.Bekle(5);
         driver.quit();
     }
