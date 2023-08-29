@@ -35,6 +35,7 @@ public class BaseDriver {
 
     public void loginTesti(){
         driver.get("https://opencart.abstracta.us/index.php?route=account/login");
+        MyFunc.Bekle(2);
 
         WebElement inputEmail = driver.findElement(By.id("input-email"));
         inputEmail.sendKeys("testng1@gmail.com");
