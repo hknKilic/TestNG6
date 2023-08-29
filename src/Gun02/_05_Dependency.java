@@ -17,8 +17,17 @@ public class _05_Dependency {
     @Test(dependsOnMethods = {"driveCar","startCar"})
     public void parkCar()   {  System.out.println("parkCar");  }
 
-    @Test(dependsOnMethods = {"parkCar"})
+    //alwaysRun = true,  sırasını bekler, bağımlılıkları var ama hata çıkarsa da yine çalıştır.
+    @Test(dependsOnMethods = {"parkCar"}, alwaysRun = true)
     public void stopCar()   {  System.out.println("stopCar");  }
 
     // aynı seviyedeki testleri için priority verilebilir.
 }
+
+// bağımlı testler, direk metodundan çalıştırdığınızda bağımlı olduğu metod zincirinde
+// 1 üste kadar otomatik çağırıp çalışabilir.
+
+//Dependency (bağımlılık):Bir testin diğer bir testin sonucuna veya
+//belirli bir duruma bağlı olduğu durumları ifade eder.
+//Örneğin, bir testin çalışabilmesi için önce başka bir testin başarılı
+//bir şekilde tamamlanması gerekebilir. Bu tür senaryolarda TestNG'nin Dependency özelliği devreye girer.
