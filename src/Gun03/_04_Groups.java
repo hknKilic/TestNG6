@@ -1,4 +1,4 @@
-package Gun03.XML;
+package Gun03;
 
 import org.testng.annotations.Test;
 
@@ -11,7 +11,7 @@ public class _04_Groups {
     public void test3(){ System.out.println("test3"); }
 
     @Test(groups = {"Regression"})
-    public void test5(){ System.out.println("test4"); }
+    public void test5(){ System.out.println("test5"); }
 
     @Test(groups = {"Regression"})
     public void test2(){ System.out.println("test2"); }
