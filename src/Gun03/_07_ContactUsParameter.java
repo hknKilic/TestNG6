@@ -14,10 +14,10 @@ import org.testng.Assert;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-public class _06_ContactUsParameter extends BaseDriver {
+public class _07_ContactUsParameter extends BaseDriver {
 
     @Test
-    @Parameters("mesaj") // xml deki prametre name i
+    @Parameters("mesaj")
     public void contactUs(String gelenMesaj){
 
         WebElement contactUsBtn= driver.findElement(By.linkText("Contact Us"));
