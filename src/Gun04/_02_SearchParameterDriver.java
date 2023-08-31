@@ -33,7 +33,7 @@ public class _02_SearchParameterDriver extends BaseDriverParameter {
                        (By.cssSelector("[class='caption'] > h4"));
 
         for (WebElement e : captions) {
-            //System.out.println("e.getText() = " + e.getText());
+            System.out.println("e.getText() = " + e.getText());
             Assert.assertTrue(e.getText().toLowerCase().contains(arananKelime), "aranan kelime bulunamadı");
         }
 

@@ -1,6 +1,6 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite name="mySuit">
+<suite name="mySuit" parallel="tests" thread-count="2">
 
     <test name="myTest1">
         <parameter name="searchText" value="mac"></parameter>
