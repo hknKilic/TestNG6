@@ -17,7 +17,7 @@ import org.testng.annotations.Test;
 public class _07_ContactUsParameter extends BaseDriver {
 
     @Test
-    @Parameters("mesaj")
+    @Parameters("mesaj") // xml de ki ile aynı name olmalı
     public void contactUs(String gelenMesaj){
 
         WebElement contactUsBtn= driver.findElement(By.linkText("Contact Us"));
