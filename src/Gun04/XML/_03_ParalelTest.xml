@@ -1,6 +1,6 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite name="mySuit" parallel="tests" thread-count="2">
+<suite name="mySuit" parallel="tests" thread-count="3">
 
     <test name="myTest1">
         <parameter name="searchText" value="mac"></parameter>
@@ -15,6 +15,16 @@
     <test name="myTest2">
         <parameter name="searchText" value="samsung"></parameter>
         <parameter name="browserTipi" value="firefox"></parameter>
+
+        <classes>
+            <class name="Gun04._02_SearchParameterDriver"> </class>
+        </classes>
+
+    </test>
+
+    <test name="myTest3">
+        <parameter name="searchText" value="samsung"></parameter>
+        <parameter name="browserTipi" value="chrome"></parameter>
 
         <classes>
             <class name="Gun04._02_SearchParameterDriver"> </class>
