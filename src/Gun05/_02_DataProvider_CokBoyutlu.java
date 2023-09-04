@@ -11,8 +11,8 @@ public class _02_DataProvider_CokBoyutlu {
         System.out.println(username+" "+password);
     }
 
-    @DataProvider
-    public Object[][] UserData(){
+    @DataProvider // bu metoda dataprovider görevi verildi.
+    public Object[][] UserData(){ // DataProvider olarak kullanılcak metodun tipi Object olmak zorunda.
         Object[][] data={
                 {"ihsan","122334"},
                 {"sokol", "rustem5"},
@@ -26,3 +26,11 @@ public class _02_DataProvider_CokBoyutlu {
 
 
 }
+
+/**
+ * Aşağıdaki ikili ile Dataproviderın içindeki bütün veriler tek tek test e gönderilerek
+ * data sayısı kadar test çalıştırılır, dataların olduğu yere DataProvider annottion ı konur.
+ * çalıştırılacak teste ise dataProvider = "getData"  bölümü eklenir.
+ * Dataprovider bir testi birden fazla DATA ile çok çalıştırmak için kullanılır.
+ * XML file ise file gruplama, pararalel, ve farklı tesleri koordine edip birarada çalıştırmak için kullanılır.
+ */
