@@ -27,7 +27,7 @@ public class _02_SoftAssertVsHardAssert {
         _softAssert.assertEquals("www.facebook.com/homepage", strHomePage); // pass
         System.out.println("Assert 1");
 
-        _softAssert.assertEquals("www.facebook.com/profile", strCartPage); // fail
+        _softAssert.assertEquals("www.facebook.com/profile", strCartPage,"oluşanla beklenen aynı olmadı"); // fail
         System.out.println("Assert 2");
 
         _softAssert.assertEquals("www.facebook.com/settings", strEditAccount); // fail
