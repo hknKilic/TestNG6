@@ -29,6 +29,8 @@ public class _01_GenelSoru extends BaseDriver {
         for (int i = 0; i < harfler.size(); i++) {
 
             List<WebElement>  markalar=markalarSatirlari.get(i).findElements(By.tagName("div"));  // markalar bunun içinde
+            //By.cssSelector("[class='col-sm-3']")
+            // element içinde element aranırken xpath kullanılmaz, çünkü o tüm sayafya bakar.
 
             for(WebElement marka: markalar) {
                 System.out.println(harfler.get(i).getText()+" "+marka.getText().charAt(0)+" "+marka.getText() );
@@ -38,7 +40,7 @@ public class _01_GenelSoru extends BaseDriver {
         }
 
 
-
+      // TODO: isteyenler aynı soruyu  https://www.ebay.com/n/all-brands bu siteden testedebilir.
     }
 
 
