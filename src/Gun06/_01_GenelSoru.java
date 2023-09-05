@@ -1,0 +1,47 @@
+package Gun06;
+
+/*
+  Senaryo;
+  1- Brands menusune gidiniz.
+  2- Burada her bir markanın üstünde yer alan harf ile başladığını doğrulayınız
+*/
+
+
+import Utility.BaseDriver;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+import java.util.List;
+
+public class _01_GenelSoru extends BaseDriver {
+
+    @Test
+    public void brandsValidation(){
+        WebElement brandsLink= driver.findElement(By.linkText("Brands"));
+        brandsLink.click();
+
+        List<WebElement> harfler=driver.findElements(By.cssSelector("[id='content'] > h2")); // harfler
+        List<WebElement> markalarSatirlari=driver.findElements(By.cssSelector("[id='content'] > div")); // markaSatirlarini
+
+
+        for (int i = 0; i < harfler.size(); i++) {
+
+            List<WebElement>  markalar=markalarSatirlari.get(i).findElements(By.tagName("div"));  // markalar bunun içinde
+
+            for(WebElement marka: markalar) {
+                System.out.println(harfler.get(i).getText()+" "+marka.getText().charAt(0)+" "+marka.getText() );
+                Assert.assertEquals(harfler.get(i).getText().charAt(0), marka.getText().charAt(0));
+            }
+
+        }
+
+
+
+    }
+
+
+
+
+}

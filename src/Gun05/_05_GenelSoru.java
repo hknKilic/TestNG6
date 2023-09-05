@@ -43,7 +43,8 @@ public class _05_GenelSoru extends BaseDriver {
                                 "Menu beklendiği gibi değil");
         }
 
-
+      // Assert ya testNG ye ait          , yada JUnit e ait
+        // Actual, Expected, Mesaj        , Mesaj, Actual, Expected
     }
 
 }
