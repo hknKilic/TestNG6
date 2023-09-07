@@ -19,7 +19,7 @@ public class _03_WishListElements {
     @FindBy(xpath="//div[@class='caption']//h4")
     public List<WebElement> productList;
 
-    @FindBy(xpath="//span[contains(text(),'Wish List')]")
+    @FindBy(linkText="Wish List")
     public WebElement wishListLink;
 
     @FindBy(xpath="//td[@class='text-left']/a")
