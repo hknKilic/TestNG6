@@ -52,8 +52,8 @@ public class _01_WishList extends BaseDriver {
         List<WebElement> wishList=driver.findElements(By.xpath("//td[@class='text-left']/a"));
 
         //aradığımız ürün listede var mı yok mu?
-
         boolean bulundu=MyFunc.listContainsString(wishList, wishItemText);
+
         Assert.assertTrue(bulundu,"Wish Liste atanan ürün bulunamadı");
     }
 
