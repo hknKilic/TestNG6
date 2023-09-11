@@ -8,6 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.testng.ITestResult;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
@@ -68,10 +69,13 @@ public class BaseDriver {
     }
 
     @AfterMethod
-    public void afterMethod(){
+    public void afterMethod(ITestResult sonuc){ // tesin sonuç ve isim bilgisini olduğu değişkeni vereyim mi
         //System.out.println("test metodu bitti");
-        logger4j.info("test metodu bitti");
+        logger4j.info(sonuc.getName() +" test metodu bitti " + (sonuc.getStatus()==1 ? " passed " : "fail") );
         logger4j.warn("warning mesaj test bitti");
+
+        // excel yazabileceksin
+        // dosyaya da yazabileceksin
     }
 
 
