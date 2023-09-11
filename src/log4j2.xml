@@ -2,6 +2,10 @@
 <configuration>
     <loggers>
 <!--         Çağırma bölümü-->
+<!--        # logger options: ALL -> DEBUG -> INFO -> WARN -> ERROR -> FATAL -> OFF-->
+           <Root level="INFO">
+               <AppenderRef ref="LogToConsole"/>
+           </Root>
 
     </loggers>
 
