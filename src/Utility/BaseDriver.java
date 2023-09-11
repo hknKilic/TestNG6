@@ -64,12 +64,14 @@ public class BaseDriver {
     public void beforeMethod(){
         //System.out.println("test metodu başladı");
         logger4j.info("test metodu başladı");
+        logger4j.warn("warning mesaj test başladı");
     }
 
     @AfterMethod
     public void afterMethod(){
         //System.out.println("test metodu bitti");
         logger4j.info("test metodu bitti");
+        logger4j.warn("warning mesaj test bitti");
     }
 
 

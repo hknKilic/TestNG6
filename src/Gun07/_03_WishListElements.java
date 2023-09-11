@@ -28,7 +28,7 @@ public class _03_WishListElements {
     @FindBy(xpath="//span[@class='hidden-xs hidden-sm hidden-md' and text()='Add to Cart']")
     public List<WebElement> addToChart;
 
-    @FindBy(xpath="//a[text()='shopping cart']")
+    @FindBy(linkText="Shopping Cart")
     public WebElement shoppingCart;
 
 
